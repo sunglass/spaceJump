@@ -39,18 +39,20 @@
 
             </div>
             <div id="main">
-                <div id="loginBox" data-lift="Login">
-                    <label id="loginBoxError" class="text-error">
-                        <small>Sorry! Please try again with your Sunglass username and password.</small>
-                    </label>
+                <div data-lift="Login.showLogin">
+                    <div id="loginBox" data-lift="Login">
+                        <label id="loginBoxError" class="text-error">
+                            <small>Sorry! Please try again with your Sunglass username and password.</small>
+                        </label>
 
-                    <form class="form-inline" data-lift="form.ajax">
-                        <input type="text" class="input-small" id="username" name="email" placeholder="Sunglass email">
-                        <input type="password" class="input-small" id="password" name="password" placeholder="Sunglass Password">
-                        <button type="submit" class="btn" id="doLogin">Yo!</button>
-                    </form>
+                        <form class="form-inline" data-lift="form.ajax">
+                            <input type="text" class="input-small" id="username" name="email" placeholder="Sunglass email">
+                            <input type="password" class="input-small" id="password" name="password" placeholder="Sunglass Password">
+                            <button type="submit" class="btn" id="doLogin">Yo!</button>
+                        </form>
+                    </div>
                 </div>
-                <div id="app">
+                <div id="app" data-lift="Login.showApp">
                     <div id="appTop">
 
                         <div id="creationBox">

@@ -118,6 +118,7 @@ textarea {
     #footer{
         height: 30px;
         background-color: #7cadad;
+        display: none;
     }
 
     /*========================

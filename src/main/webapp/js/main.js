@@ -21,6 +21,7 @@ var TagManager = function(){
         this.tags.length =  0;
     }
 };
+var filterCards;
 $(function(){
     //ui caching here
     var filterInputTag = $("#inputTag");
@@ -72,30 +73,6 @@ $(function(){
         filter:"*"
     });
 
-    var availableTags = [
-        "ActionScript",
-        "AppleScript",
-        "Asp",
-        "BASIC",
-        "C",
-        "C++",
-        "Clojure",
-        "COBOL",
-        "ColdFusion",
-        "Erlang",
-        "Fortran",
-        "Groovy",
-        "Haskell",
-        "Java",
-        "JavaScript",
-        "Lisp",
-        "Perl",
-        "PHP",
-        "Python",
-        "Ruby",
-        "Scala",
-        "Scheme"
-    ];
     filterInputTag.autocomplete({
         source:availableTags
     });
@@ -116,14 +93,13 @@ $(function(){
         $("#selectedTags").find(".tags").remove();
     };
 
-    var filterCards = function(){
+    filterCards = function(){
         var filterString = "*";
         if(filterTags.tags.length > 0) {
             filterString = "." + filterTags.tags.join(".");
         }
         $("#contentBox").isotope({filter:filterString });
     };
-    filterCards();
 
     var resetFields = function(){
         $("#descriptionBox").val("");
