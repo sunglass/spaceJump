@@ -30,6 +30,8 @@ $(function(){
         var thisEl = $(this);
         var newTag = $("<span></span>").addClass("tag").html(thisEl.val());
         $("#selectedTags").append(newTag);
+        $("#inputTag").val("").focus();
+        return false;
     } );
 
 
