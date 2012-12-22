@@ -1,7 +1,29 @@
+var TagManager = function(){
+    this.tags = [];
+    this.addTag = function(tag){
+        var indx = this.getTagIndex(tag);
+        if(indx < 0) {
+            this.tags.push(tag);
+            return this.tags.length;
+        }
+        return 0;
+    };
+    this.getTagIndex = function(tag) {
+        return this.tags.indexOf(tag);
+    };
+    this.removeTag = function(tag) {
+        var indx = this.getTagIndex(tag);
+        if(indx >= 0) {
+            this.tags.splice(indx,1);
+        }
+    };
+};
 $(function(){
     //ui caching here
     var filterInputTag = $("#inputTag");
     var filterAddedTags = $("#selectedTags");
+
+    var filterTags = new TagManager();
     //end of caching here
 
     //Bind listeners here
@@ -18,6 +40,11 @@ $(function(){
     });
 
     filterAddedTags.on("click",".tag",function(){
+        var thisEl = $(this);
+        var tagName = thisEl.attr("tagName"), index;
+        if(tagName) {
+           filterTags.removeTag(tagName);
+        }
         $(this).remove();
     });
 
@@ -52,9 +79,12 @@ $(function(){
     });
     filterInputTag.on( "autocompleteselect", function( event, ui ) {
         var thisEl = $(this);
-        var newTag = $("<label>").addClass("tag").html(ui.item.value);
-        $("#selectedTags").append(newTag);
-        $("#inputTag").val("").focus();
+        var newTagVal = ui.item.value;
+        if(filterTags.addTag(newTagVal)) {
+            var newTag = $("<label>").addClass("tag").html(newTagVal).attr("tagName",newTagVal);
+            $("#selectedTags").append(newTag);
+        }
+        thisEl.val("").focus();
         return false;
     } );
 
