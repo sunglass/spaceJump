@@ -15,13 +15,13 @@ import http.js._
  */
 class Login {
 
-  var email = "your sunglass email"
+  var email = ""
   var password =""
 
   def process() = {
     println("Processing")
 
-    JsCmds.SetHtml("loginBoxError", xml.Text("Something happened!"))
+    JsCmds.Run("$(\"#loginBox\").fadeOut(400, function(){$(\"#app\").fadeIn(400)});")
   }
 
   def render = {
