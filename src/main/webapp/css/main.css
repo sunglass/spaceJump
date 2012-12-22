@@ -216,6 +216,7 @@ textarea {
         margin:5px;
         border: 1px solid #999;
         overflow: hidden;
+        border-radius: 10px;
     }
 
     .cardItemImage{
