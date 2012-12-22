@@ -24,7 +24,7 @@ class Login extends Loggable {
   def process() = {
     if(SunglassUser.authenticateUser(email, password)) {
       println("Login Success")
-      val user = SJUser.findOrCreate(email, password)
+      val user = SJUser.findOrCreate(email.split("@")(0), email)
       // set current user
       SessionData.currentUser.set(Full(user))
       JsCmds.Run("$(\"#loginBox\").fadeOut(400, function(){$(\"#app\").fadeIn(400)});filterCards();")
