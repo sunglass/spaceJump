@@ -220,7 +220,7 @@ textarea {
     }
 
     .cardItemImage{
-        background-image: url("../images/liz.jpg");
+        background-image: url("../img/liz.jpg");
         height: 50px;
         width: 50px;
         background-size: cover;
