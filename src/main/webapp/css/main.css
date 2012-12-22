@@ -127,21 +127,36 @@ textarea {
         position: absolute;
         top:50%;
         left:50%;
-        margin-top:-200px;
-        margin-left:-200px;
-        width: 400px;
-        height: 400px;
+        margin-top:-50px;
+        margin-left:-300px;
+        width: 600px;
+        height: 100px;
+        text-align: center;
+    }
+
+    #loginBox form input{
+        width:200px;
     }
 
     #app{
-        /*display: none;*/
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
     }
 
     #creationBox{
-
+        width: 600px;
+        margin: 0px auto;
+        padding: 5px;
     }
 
-
+    #selectedTags .tag{
+        margin:5px;
+    }
 
 
 
