@@ -23,7 +23,7 @@ class TagActor extends CometActor with CometListener {
   }
 
   def render = {
-    tags.map(_.text.is).mkString("[\"", "\",\"", "\"]")
-    Script(Run("availableTags = " + tags + ";"))
+    val res = tags.map(_.text.is).mkString("[\"", "\",\"", "\"]")
+    Script(Run("availableTags = " + res + ";"))
   }
 }

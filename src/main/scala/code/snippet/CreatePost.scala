@@ -37,7 +37,7 @@ class CreatePost {
     (for {
       usr <- SessionData.currentUser.is
     } yield {
-      val tags = tagTexts.split(",").map(findOrCreateTagForText(_))
+      val tags = tagTexts.split(",").map(findOrCreateTagForText(_)))
       val post = Post.create.link(link).text(desc).author(usr).createdAt(now).saveMe()
       post.assignedTags ++= tags
       post.save
