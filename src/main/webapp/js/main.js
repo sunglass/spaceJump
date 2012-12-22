@@ -34,9 +34,7 @@ $(function(){
         $("#filterBox").fadeOut(400, function(){
             $("#creationBox").fadeIn(400);
         });
-        $("#descriptionBox").val("");
-        $("#linkBox").val("");
-        $("#tagBox").val("");
+        resetFields();
     });
 
     $("#goToFilterBox").click(function(){
@@ -118,7 +116,7 @@ $(function(){
         $("#selectedTags").find(".tags").remove();
     };
 
-    filterCards = function(){
+    var filterCards = function(){
         var filterString = "*";
         if(filterTags.tags.length > 0) {
             filterString = "." + filterTags.tags.join(".");
@@ -126,4 +124,10 @@ $(function(){
         $("#contentBox").isotope({filter:filterString });
     };
     filterCards();
+
+    var resetFields = function(){
+        $("#descriptionBox").val("");
+        $("#linkBox").val("");
+        $("#tagBox").val("");
+    }
 });
