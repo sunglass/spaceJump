@@ -1,5 +1,8 @@
 package code.snippet
 
+import net.liftweb._
+import util._
+import Helpers._
 /**
  * Created with IntelliJ IDEA.
  * User: comet
@@ -10,7 +13,13 @@ package code.snippet
 class CreatePost {
   // Post elements here
 
-  def process() {
+  def process = {
+    println("Process Called!! CreatePost")
+    "#sljgsjlfg" #> ""
+  }
 
+  def render = {
+    println("Render Called!! CreatePost")
+    "#asdsadsda" #> ""
   }
 }
