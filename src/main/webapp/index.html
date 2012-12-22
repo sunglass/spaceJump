@@ -34,7 +34,9 @@
 
         <!-- Add your site or application content here -->
         <div id="appWrap">
-            <div id="header"></div>
+            <div id="header">
+
+            </div>
             <div id="main">
                 <div id="loginBox" data-lift="Login">
                     <label id="loginBoxError" class="text-error">
@@ -51,39 +53,180 @@
                     <div id="appTop">
 
                         <div id="creationBox">
-                            <div class="actionArea">
-                                <input id="linkBox" class="input-xxlarge" type="text" placeholder="link please..">
-                                <textarea id="descriptionBox" class="input-xlarge" rows="5" placeholder="description please.."></textarea>
-                                <textarea id="tagBox" class="input-xlarge" rows="2" placeholder="tag it.."></textarea>
+                            <div class="actionArea" data-lift="CreatePost">
+                                <form class="form-inline" data-lift="form.ajax">
+                                    <input id="linkBox" class="input" type="text" placeholder="link please..">
+                                    <textarea id="descriptionBox" class="input-xlarge" rows="3" placeholder="description please.."></textarea>
+                                    <textarea id="tagBox" class="input-xlarge" rows="3" placeholder="enter comma separated TAGS. no funny business!"></textarea>
+                                    <button type="submit" class="btn btn-warning" id="createCardEntry">Yeah! Create this shit!</button>
+                                </form>
                             </div>
 
                             <div class="navArea">
                                 <button type="button" class="btn btn-warning" id="goToFilterBox">back to search..</button>
-                                <button type="button" class="btn btn-warning" id="createCardEntry">Yeah! Create this shit!</button>
                             </div>
                         </div>
 
                         <div id="filterBox">
                             <div class="actionArea">
-                                <input id="inputTag" class="input-xxlarge" placeholder="Filter stuff..." />
+                                <input id="inputTag" class="input-xxlarge" type="text" placeholder="Filter stuff..." />
                                 <div id="selectedTags"></div>
                             </div>
 
                             <div class="navArea">
-                                <button type="button" class="btn btn-warning" id="goToCreationBox">Naah! Add something new..</button>
+                                <button type="button" class="btn btn-warning" id="goToCreationBox">add new stuff..</button>
                             </div>
 
                         </div>
 
                     </div>
                     <div id="contentBox">
-                        <div class="cardItemBox">
-                            <div class="cardItemImage"></div>
-                            <div class="cardItemLink"></div>
-                            <div class="cardItemDesc"></div>
-                            <div class="cardItemLike"></div>
-                            <div class="cardItemCommentBox"></div>
+                        <div class="cardItemBox Javascript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
                         </div>
+                        <div class="cardItemBox ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+                        <div class="cardItemBox Javascript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
+                        <div class="cardItemBox AppleScript ActionScript">
+                            <!--<div class="cardItemImage"></div>-->
+                            <div class="metaData">
+                                <h5 class="cardItemAuthor">Francis</h5>
+                                <a class="cardItemLink" target="_blank" href="http://google.com">google.com</a>
+                            </div>
+
+                            <div class="cardItemDesc">some random description</div>
+                        </div>
+
                     </div>
                 </div>
             </div>
