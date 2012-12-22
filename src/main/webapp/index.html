@@ -54,14 +54,16 @@
 
                         <div id="creationBox">
                             <div class="actionArea">
-                                <input id="linkBox" class="input" type="text" placeholder="link please..">
-                                <textarea id="descriptionBox" class="input-xlarge" rows="3" maxlength="100" placeholder="description please.."></textarea>
-                                <textarea id="tagBox" class="input-xlarge" rows="3" placeholder="enter comma separated TAGS. no funny business!"></textarea>
+                                <form class="form-inline">
+                                    <input id="linkBox" class="input" type="text" placeholder="link please..">
+                                    <textarea id="descriptionBox" class="input-xlarge" rows="3" placeholder="description please.."></textarea>
+                                    <textarea id="tagBox" class="input-xlarge" rows="3" placeholder="enter comma separated TAGS. no funny business!"></textarea>
+                                    <button type="submit" class="btn btn-warning" id="createCardEntry">Yeah! Create this shit!</button>
+                                </form>
                             </div>
 
                             <div class="navArea">
                                 <button type="button" class="btn btn-warning" id="goToFilterBox">back to search..</button>
-                                <button type="button" class="btn btn-warning" id="createCardEntry">Yeah! Create this shit!</button>
                             </div>
                         </div>
 
