@@ -21,6 +21,7 @@ var TagManager = function(){
         this.tags.length =  0;
     }
 };
+var filterCards;
 $(function(){
     //ui caching here
     var filterInputTag = $("#inputTag");
@@ -116,14 +117,13 @@ $(function(){
         $("#selectedTags").find(".tags").remove();
     };
 
-    var filterCards = function(){
+    filterCards = function(){
         var filterString = "*";
         if(filterTags.tags.length > 0) {
             filterString = "." + filterTags.tags.join(".");
         }
         $("#contentBox").isotope({filter:filterString });
     };
-    filterCards();
 
     var resetFields = function(){
         $("#descriptionBox").val("");
