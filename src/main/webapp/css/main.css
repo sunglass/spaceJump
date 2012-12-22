@@ -154,6 +154,42 @@ textarea {
         padding: 5px;
     }
 
+    #contentBox{
+        width: 600px;
+        margin: 0px auto;
+        padding: 5px;
+        border: 1px dashed #2e8b57;
+    }
+
+    .cardItemBox{
+        width:200px;
+        min-height: 200px;
+        background-color: #999;
+    }
+
+    .cardItemImage{
+        background-image: url("../images/liz.jpg");
+        height: 50px;
+        width: 50px;
+        background-size: cover;
+    }
+
+    .cardItemLink{
+
+    }
+
+    .cardItemDesc{
+
+    }
+
+    .cardItemLike{
+
+    }
+
+    .cardItemCommentBox{
+
+    }
+
     #selectedTags .tag{
         margin:5px;
     }
