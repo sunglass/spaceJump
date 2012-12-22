@@ -154,7 +154,9 @@ textarea {
         padding: 5px;
     }
 
-
+    #selectedTags .tag{
+        margin:5px;
+    }
 
 
 
