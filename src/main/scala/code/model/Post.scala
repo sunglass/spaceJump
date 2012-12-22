@@ -17,9 +17,6 @@ class Post extends LongKeyedMapper[Post] with IdPK with ManyToMany {
   object link extends MappedString(this, 2000)
   object author extends MappedLongForeignKey(this, SJUser)
   object createdAt extends MappedDateTime(this)
-  object commentCount extends MappedLong(this)
-  object tagCount extends MappedLong(this)
-  object likeCount extends MappedLong(this)
 
   object assignedTags extends MappedManyToMany(TagAssigned, TagAssigned.post, TagAssigned.tag, Tag)
   object likeUser extends MappedManyToMany(LikedPost, LikedPost.post, LikedPost.user, SJUser)

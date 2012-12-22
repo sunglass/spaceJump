@@ -19,7 +19,7 @@ class Login {
   var password =""
 
   def process() = {
-    println("Processing")
+    println("Processing! Login")
 
     JsCmds.Run("$(\"#loginBox\").fadeOut(400, function(){$(\"#app\").fadeIn(400)});")
   }
