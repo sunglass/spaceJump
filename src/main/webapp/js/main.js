@@ -23,11 +23,13 @@ $(function(){
         "Scala",
         "Scheme"
     ];
-    $("#tags").autocomplete({
+    $("#inputTag").autocomplete({
         source:availableTags
     });
-    $("#tags").on( "autocompleteselect", function( event, ui ) {
-        console.log($(this).val());
+    $("#inputTag").on( "autocompleteselect", function( event, ui ) {
+        var thisEl = $(this);
+        var newTag = $("<span></span>").addClass("tag").html(thisEl.val());
+        $("#selectedTags").append(newTag);
     } );
 
 
