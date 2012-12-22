@@ -34,7 +34,9 @@
 
         <!-- Add your site or application content here -->
         <div id="appWrap">
-            <div id="header"></div>
+            <div id="header">
+
+            </div>
             <div id="main">
                 <div id="loginBox" data-lift="Login">
                     <label id="loginBoxError" class="text-error">
@@ -52,9 +54,9 @@
 
                         <div id="creationBox">
                             <div class="actionArea">
-                                <input id="linkBox" class="input-xxlarge" type="text" placeholder="link please..">
-                                <textarea id="descriptionBox" class="input-xlarge" rows="5" maxlength="100" placeholder="description please.."></textarea>
-                                <textarea id="tagBox" class="input-xlarge" rows="2" placeholder="tag it.."></textarea>
+                                <input id="linkBox" class="input" type="text" placeholder="link please..">
+                                <textarea id="descriptionBox" class="input-xlarge" rows="3" maxlength="100" placeholder="description please.."></textarea>
+                                <textarea id="tagBox" class="input-xlarge" rows="3" placeholder="enter comma separated TAGS. no funny business!"></textarea>
                             </div>
 
                             <div class="navArea">
@@ -65,12 +67,12 @@
 
                         <div id="filterBox">
                             <div class="actionArea">
-                                <input id="inputTag" class="input-xxlarge" placeholder="Filter stuff..." />
+                                <input id="inputTag" class="input-xxlarge" type="text" placeholder="Filter stuff..." />
                                 <div id="selectedTags"></div>
                             </div>
 
                             <div class="navArea">
-                                <button type="button" class="btn btn-warning" id="goToCreationBox">Naah! Add something new..</button>
+                                <button type="button" class="btn btn-warning" id="goToCreationBox">add new stuff..</button>
                             </div>
 
                         </div>
