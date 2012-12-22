@@ -209,7 +209,7 @@ textarea {
     .cardItemBox{
         width:200px;
         min-height: 200px;
-        background-color: #7cadad;
+        background-color: #999;
         padding:3px;
     }
 
@@ -229,12 +229,7 @@ textarea {
     }
 
     .cardItemDesc{
-        clear:both;
-        float:left;
-    }
 
-    .cardItemAuthor {
-        float:left;
     }
 
     .cardItemLike{
