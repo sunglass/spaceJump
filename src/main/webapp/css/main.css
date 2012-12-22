@@ -205,7 +205,7 @@ textarea {
     .cardItemBox{
         width:200px;
         min-height: 200px;
-        background-color: #999;
+        background-color: #7cadad;
     }
 
     .cardItemImage{
@@ -216,11 +216,17 @@ textarea {
     }
 
     .cardItemLink{
-
+        clear:both;
+        float:left;
     }
 
     .cardItemDesc{
+        clear:both;
+        float:left;
+    }
 
+    .cardItemAuthor {
+        float:left;
     }
 
     .cardItemLike{
