@@ -1,6 +1,6 @@
 package code.model
 
-import net.liftweb.mapper.{MappedTime, MappedLong, MappedString, LongKeyedMapper}
+import net.liftweb.mapper._
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,12 +9,12 @@ import net.liftweb.mapper.{MappedTime, MappedLong, MappedString, LongKeyedMapper
  * Time: 5:32 PM
  * To change this template use File | Settings | File Templates.
  */
-class SJComment extends LongKeyedMapper[SJComment] with IdPK{
-  def getSingleton = SJComment
+class Comment extends LongKeyedMapper[Comment] with IdPK {
+  def getSingleton = Comment
 
   // Columns
   object text extends MappedString(this, 255)
-  object author extends MappedString(this, 255)
-  object timestamp extends MappedTime(this)
-  object postId extends MappedLong(this)
+  object author extends MappedLongForeignKey(this, SJUser)
+  object postId extends MappedLongForeignKey(this, Post)
+  object createdAt extends MappedDateTime(this)
 }
