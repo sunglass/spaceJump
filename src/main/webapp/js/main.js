@@ -80,7 +80,7 @@ $(function(){
         var thisEl = $(this);
         var newTagVal = ui.item.value;
         if(filterTags.addTag(newTagVal)) {
-            var newTag = $("<label>").addClass("tag").html(newTagVal).attr("tagName",newTagVal);
+            var newTag = $("<label>").addClass("tag").html(newTagVal+" | x").attr("tagName",newTagVal);
             $("#selectedTags").append(newTag);
             filterCards();
         }
