@@ -17,7 +17,10 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
         <link rel="stylesheet" href="css/bootstrap.min.css">
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -46,7 +49,12 @@
                 </div>
                 <div id="app">
                     <div id="creationBox"></div>
-                    <div id="filterBox"></div>
+                    <div id="filterBox">
+						<input id="inputTag" placeholder="Filter stuff..." />
+                        <div id="selectedTags">
+
+                        </div>
+                    </div>
                     <div id="contentBox"></div>
                 </div>
             </div>
@@ -56,6 +64,7 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
