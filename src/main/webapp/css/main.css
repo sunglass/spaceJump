@@ -146,16 +146,39 @@ textarea {
         width: 100%;
         height: 100%;
         text-align: center;
+        padding: 5px;
     }
 
     #appTop{
-        width: 600px;
+        width:800px;
+        overflow: hidden;
         margin: 0px auto;
         padding: 5px;
     }
 
-    #creationBox{
+    .actionArea{
+        float: left;
+        text-align: left;
+    }
 
+    .navArea{
+        float: right;
+    }
+
+    #creationBox{
+        display: none;
+    }
+
+    #linkBox{
+        width:700px;
+    }
+
+    #descriptionBox{
+        width:300px;
+    }
+
+    #tagBox{
+        width:300px;
     }
 
     #selectedTags .tag{
@@ -166,7 +189,7 @@ textarea {
     }
 
     #contentBox{
-        width: 600px;
+
         margin: 0px auto;
         padding: 5px;
         border: 1px dashed #2e8b57;

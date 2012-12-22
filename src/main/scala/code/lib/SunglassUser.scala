@@ -1,6 +1,7 @@
 package code.lib
 
 import dispatch._
+import net.liftweb.util.Helpers._
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +12,8 @@ import dispatch._
  */
 object SunglassUser {
   def authenticateUser(email:String, password:String) = {
-    val loginUrl = url("https://sunglass.io/login")
+    val req = url("https://sunglass.io/login").POST
+    req.addParameter("email", email).addParameter("password", password)
+    tryo{Http(req OK as.String)()}.isDefined
   }
 }

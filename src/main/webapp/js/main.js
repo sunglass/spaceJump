@@ -27,6 +27,17 @@ $(function(){
     //end of caching here
 
     //Bind listeners here
+    $("#goToCreationBox").click(function(){
+        $("#filterBox").fadeOut(400, function(){
+            $("#creationBox").fadeIn(400);
+        });
+    });
+
+    $("#goToFilterBox").click(function(){
+        $("#creationBox").fadeOut(400, function(){
+            $("#filterBox").fadeIn(400);
+        });
+    });
 
     filterAddedTags.on("click",".tag",function(){
         var thisEl = $(this);
