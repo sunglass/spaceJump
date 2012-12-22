@@ -1,5 +1,7 @@
 package code.model
 
+import net.liftweb.mapper._
+
 /**
  * Created with IntelliJ IDEA.
  * User: z33m
@@ -7,6 +9,8 @@ package code.model
  * Time: 5:21 PM
  * To change this template use File | Settings | File Templates.
  */
-class Post {
-
+class Post extends LongKeyedMapper[Post] with IdPK {
+  object text extends MappedText(this)
 }
+
+object Post extends Post with LongKeyedMetaMapper[Post] {}
