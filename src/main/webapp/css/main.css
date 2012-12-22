@@ -159,6 +159,7 @@ textarea {
         overflow: hidden;
         margin: 0px auto;
         padding: 5px;
+        border-bottom: 2px solid #999;
     }
 
     .actionArea{
@@ -202,9 +203,9 @@ textarea {
     }
 
     #contentBox{
+        position: relative;
         margin: 0px auto;
         padding: 5px;
-        border: 1px dashed #2e8b57;
     }
 
     .cardItemBox{
@@ -213,6 +214,8 @@ textarea {
         background-color: #7cadad;
         padding:3px;
         margin:5px;
+        border: 1px solid #999;
+        overflow: hidden;
     }
 
     .cardItemImage{
@@ -226,8 +229,9 @@ textarea {
         clear:both;
         float:left;
         color:#eaeaea;
-        max-width:90%;
         text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .cardItemAuthor {
@@ -236,6 +240,7 @@ textarea {
     }
 
     .cardItemDesc{
+        font-size:0.8em;
         clear:both;
         float:left;
     }
