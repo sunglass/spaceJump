@@ -22,18 +22,22 @@ class CreatePost {
   var desc = ""
   var tagTexts = ""
 
-  def findTagForText(tagText:String) = {
+  def findOrCreateTagForText(tagText:String) = {
     import mapper._
-    Tag.find(By(Tag.text, tagText))
+    Tag.find(By(Tag.text, tagText)) openOr({
+      val newTag = Tag.create.text(tagText).saveMe()
+      TagServer ! newTag
+      newTag
+    })
   }
 
-  def process2() = {
+  def process() = {
     println("Process Called!! CreatePost")
     println(link + ", " + desc + ", " + tagTexts)
     (for {
       usr <- SessionData.currentUser.is
     } yield {
-      val tags = tagTexts.split(",").flatMap(findTagForText(_))
+      val tags = tagTexts.split(",").map(findOrCreateTagForText(_))
       val post = Post.create.link(link).text(desc).author(usr).createdAt(now).saveMe()
       post.assignedTags ++= tags
       post.save
@@ -50,6 +54,6 @@ class CreatePost {
     "#linkBox" #> SHtml.text("", link = _) &
     "#descriptionBox" #> SHtml.text("", desc = _) &
     "#tagBox" #> (SHtml.text("", tagTexts = _) ++
-      SHtml.hidden(process2))
+      SHtml.hidden(process))
   }
 }
