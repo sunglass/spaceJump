@@ -36,14 +36,14 @@
         <div id="appWrap">
             <div id="header"></div>
             <div id="main">
-                <div id="loginBox">
+                <div id="loginBox" data-lift="Login">
                     <label id="loginBoxError" class="text-error">
                         <small>Sorry! Please try again with your Sunglass username and password.</small>
                     </label>
 
-                    <form class="form-inline">
-                        <input type="text" class="input-small" id="username" placeholder="Sunglass Username">
-                        <input type="password" class="input-small" id="password" placeholder="Sunglass Password">
+                    <form class="form-inline" data-lift="form.ajax">
+                        <input type="text" class="input-small" id="username" name="email" placeholder="Sunglass email">
+                        <input type="password" class="input-small" id="password" name="password" placeholder="Sunglass Password">
                         <button type="submit" class="btn" id="doLogin">Yo!</button>
                     </form>
                 </div>
