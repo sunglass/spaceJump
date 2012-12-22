@@ -16,7 +16,11 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -29,17 +33,26 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="loginBox">
-
-        </div>
-        <div id="spacejump">
+        <div id="appWrap">
             <div id="header"></div>
             <div id="main">
-                <div id="creationBox"></div>
-                <div id="filterBox">
-                    <input id="tags" placeholder="Filter stuff..." />
+                <div id="loginBox">
+                    <label id="loginBoxError" class="text-error">
+                        <small>Sorry! Please try again with your Sunglass username and password.</small>
+                    </label>
+                    <div class="input-append">
+                        <input class="span2" id="username" type="text">
+                        <input class="span2" id="password" type="password">
+                        <button class="btn" id="doLogin" type="button">Go!</button>
+                    </div>
                 </div>
-                <div id="contentBox"></div>
+                <div id="app">
+                    <div id="creationBox"></div>
+                    <div id="filterBox">
+						<input id="tags" placeholder="Filter stuff..." />
+                    </div>
+                    <div id="contentBox"></div>
+                </div>
             </div>
             <div id="footer"></div>
         </div>

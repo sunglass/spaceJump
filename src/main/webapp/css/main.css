@@ -93,6 +93,54 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+    /*========================
+       Top Level Scaffolding
+    ========================*/
+    body{
+
+    }
+
+    #appWrap{
+
+    }
+
+    #header{
+        height: 30px;
+        background-color: #7cadad;
+    }
+
+    #main{
+        position: relative;
+        min-height: 600px;
+        background-color: #ccc;
+    }
+
+    #footer{
+        height: 30px;
+        background-color: #7cadad;
+    }
+
+    /*========================
+       Styles inside Main
+    ========================*/
+    #loginBox{
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin-top:-200px;
+        margin-left:-200px;
+        width: 400px;
+        height: 400px;
+    }
+
+    #app{
+        /*display: none;*/
+    }
+
+    #creationBox{
+
+    }
+
 
 
 
