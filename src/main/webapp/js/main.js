@@ -1,4 +1,17 @@
 $(function(){
+    //ui caching here
+    var filterInputTag = $("#inputTag");
+    var filterAddedTags = $("#selectedTags");
+    //end of caching here
+
+    //Bind listeners here
+
+    filterAddedTags.on("click",".tag",function(){
+        $(this).remove();
+    });
+
+    //End of listeners
+
     var availableTags = [
         "ActionScript",
         "AppleScript",
@@ -23,12 +36,12 @@ $(function(){
         "Scala",
         "Scheme"
     ];
-    $("#inputTag").autocomplete({
+    filterInputTag.autocomplete({
         source:availableTags
     });
-    $("#inputTag").on( "autocompleteselect", function( event, ui ) {
+    filterInputTag.on( "autocompleteselect", function( event, ui ) {
         var thisEl = $(this);
-        var newTag = $("<span></span>").addClass("tag").html(thisEl.val());
+        var newTag = $("<label>").addClass("tag").html(ui.item.value);
         $("#selectedTags").append(newTag);
         $("#inputTag").val("").focus();
         return false;
