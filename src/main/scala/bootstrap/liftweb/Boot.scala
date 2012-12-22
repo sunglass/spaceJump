@@ -84,5 +84,24 @@ class Boot {
 
     // Make a transaction span the whole HTTP request
     S.addAround(DB.buildLoanWrapper)
+
+    assertTags()
+
+  }
+
+  def assertTags() {
+    import mapper._
+    //assert some tags are available
+    tryo {
+      val tags = "scala" :: "javascript" :: Nil
+      tags.foreach{
+        t =>
+          if (Tag.find(By(Tag.text, t)).isEmpty) {
+            //create them
+            Tag.create.text(t).saveMe()
+          }
+      }
+    }
+
   }
 }
