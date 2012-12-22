@@ -148,10 +148,18 @@ textarea {
         text-align: center;
     }
 
-    #creationBox{
+    #appTop{
         width: 600px;
         margin: 0px auto;
         padding: 5px;
+    }
+
+    #creationBox{
+
+    }
+
+    #selectedTags .tag{
+        margin:5px;
     }
 
     #contentBox{
@@ -190,9 +198,7 @@ textarea {
 
     }
 
-    #selectedTags .tag{
-        margin:5px;
-    }
+
 
 
 
