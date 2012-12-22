@@ -49,17 +49,32 @@
                 </div>
                 <div id="app">
                     <div id="appTop">
-                        <div id="creationBox">
-                            <input id="linkBox" class="input-block-level" type="text" placeholder="link please..">
-                            <textarea id="descriptionBox" class="input-xlarge" rows="5" placeholder="description please.."></textarea>
-                            <textarea id="tagBox" class="input-xlarge" rows="2" placeholder="tag it.."></textarea>
-                        </div>
-                        <div id="filterBox">
-                            <input id="inputTag" class="input-block-level" placeholder="Filter stuff..." />
-                            <div id="selectedTags">
 
+                        <div id="creationBox">
+                            <div class="actionArea">
+                                <input id="linkBox" class="input-xxlarge" type="text" placeholder="link please..">
+                                <textarea id="descriptionBox" class="input-xlarge" rows="5" placeholder="description please.."></textarea>
+                                <textarea id="tagBox" class="input-xlarge" rows="2" placeholder="tag it.."></textarea>
+                            </div>
+
+                            <div class="navArea">
+                                <button type="button" class="btn btn-warning" id="goToFilterBox">back to search..</button>
+                                <button type="button" class="btn btn-warning" id="createCardEntry">Yeah! Create this shit!</button>
                             </div>
                         </div>
+
+                        <div id="filterBox">
+                            <div class="actionArea">
+                                <input id="inputTag" class="input-xxlarge" placeholder="Filter stuff..." />
+                                <div id="selectedTags"></div>
+                            </div>
+
+                            <div class="navArea">
+                                <button type="button" class="btn btn-warning" id="goToCreationBox">Naah! Add something new..</button>
+                            </div>
+
+                        </div>
+
                     </div>
                     <div id="contentBox">
                         <div class="cardItemBox">
