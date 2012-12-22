@@ -81,6 +81,8 @@ $(function(){
         var newTagVal = ui.item.value;
         if(filterTags.addTag(newTagVal)) {
             var newTag = $("<label>").addClass("tag").html(newTagVal).attr("tagName",newTagVal);
+            var removeEl = $("<i class='icon-remove' ></i>");
+            newTag.append(removeEl);
             $("#selectedTags").append(newTag);
             filterCards();
         }
