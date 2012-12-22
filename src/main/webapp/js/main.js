@@ -70,7 +70,7 @@ $(function(){
 
     $("#contentBox").isotope({
         itemSelector:".cardItemBox",
-        layoutMode: "fitRows",
+        layoutMode: "masonry",
         filter:"*"
     });
 
