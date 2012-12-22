@@ -63,9 +63,16 @@ $(function(){
            filterTags.removeTag(tagName);
         }
         $(this).remove();
+        filterCards();
     });
 
     //End of listeners
+
+    $("#contentBox").isotope({
+        itemSelector:".cardItemBox",
+        layoutMode: "fitRows",
+        filter:"*"
+    });
 
     var availableTags = [
         "ActionScript",
@@ -100,6 +107,7 @@ $(function(){
         if(filterTags.addTag(newTagVal)) {
             var newTag = $("<label>").addClass("tag").html(newTagVal).attr("tagName",newTagVal);
             $("#selectedTags").append(newTag);
+            filterCards();
         }
         thisEl.val("").focus();
         return false;
@@ -108,5 +116,14 @@ $(function(){
     var clearFilterTags = function(){
         filterTags.reset();
         $("#selectedTags").find(".tags").remove();
-    }
+    };
+
+    filterCards = function(){
+        var filterString = "*";
+        if(filterTags.tags.length > 0) {
+            filterString = "." + filterTags.tags.join(".");
+        }
+        $("#contentBox").isotope({filter:filterString });
+    };
+    filterCards();
 });
