@@ -138,6 +138,10 @@ textarea {
         width:200px;
     }
 
+    #loginBoxError{
+        display:none;
+    }
+
     #app{
         display: none;
         position: absolute;
@@ -174,18 +178,19 @@ textarea {
 
     #linkBox{
         width:584px;
+        margin: 5px;
     }
 
     #descriptionBox{
-        width:295px
+        margin: 5px;
     }
 
     #tagBox{
-
+        margin: 5px;
     }
 
     #createCardEntry{
-        margin-top:50px;
+        margin: 5px;
     }
 
     #selectedTags .tag{
@@ -196,7 +201,6 @@ textarea {
     }
 
     #contentBox{
-
         margin: 0px auto;
         padding: 5px;
         border: 1px dashed #2e8b57;
@@ -206,6 +210,7 @@ textarea {
         width:200px;
         min-height: 200px;
         background-color: #999;
+        padding:3px;
     }
 
     .cardItemImage{
