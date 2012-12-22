@@ -209,8 +209,9 @@ textarea {
     .cardItemBox{
         width:200px;
         min-height: 200px;
-        background-color: #999;
+        background-color: #7cadad;
         padding:3px;
+        margin:5px;
     }
 
     .cardItemImage{
@@ -228,8 +229,13 @@ textarea {
         text-overflow: ellipsis;
     }
 
-    .cardItemDesc{
+    .cardItemAuthor {
+        float:left;
+    }
 
+    .cardItemDesc{
+        clear:both;
+        float:left;
     }
 
     .cardItemLike{
