@@ -15,4 +15,6 @@ import code.model.SJUser
 
 object SessionData {
   object currentUser extends SessionVar[Box[SJUser]](Empty)
+
+  def isLoggedIn() = currentUser.get.isDefined
 }

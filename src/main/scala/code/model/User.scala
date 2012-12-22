@@ -16,4 +16,14 @@ class SJUser extends LongKeyedMapper[SJUser] with IdPK {
   object email extends MappedEmail(this, 255)
 }
 
-object SJUser extends SJUser with LongKeyedMetaMapper[SJUser]  {}
+object SJUser extends SJUser with LongKeyedMetaMapper[SJUser]  {
+
+  def findOrCreate(username:String, email:String) = {
+    SJUser.find(By(SJUser.email, email)) getOrElse {
+      val newUser = SJUser.create
+      newUser.email(email).username(username).save()
+      newUser
+    }
+  }
+
+}
