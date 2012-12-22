@@ -97,7 +97,7 @@ textarea {
        Top Level Scaffolding
     ========================*/
     body{
-
+        background-color: #ccc;
     }
 
     #appWrap{
@@ -159,10 +159,13 @@ textarea {
     .actionArea{
         float: left;
         text-align: left;
+        width:600px;
     }
 
     .navArea{
         float: right;
+        width:200px;
+        text-align: right;
     }
 
     #creationBox{
@@ -170,15 +173,19 @@ textarea {
     }
 
     #linkBox{
-        width:700px;
+        width:584px;
     }
 
     #descriptionBox{
-        width:300px;
+        width:295px
     }
 
     #tagBox{
-        width:300px;
+
+    }
+
+    #createCardEntry{
+        margin-top:50px;
     }
 
     #selectedTags .tag{
