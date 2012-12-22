@@ -17,6 +17,9 @@ var TagManager = function(){
             this.tags.splice(indx,1);
         }
     };
+    this.resetTag = function(){
+        this.tags.length =  0;
+    }
 };
 $(function(){
     //ui caching here
@@ -31,12 +34,26 @@ $(function(){
         $("#filterBox").fadeOut(400, function(){
             $("#creationBox").fadeIn(400);
         });
+        $("#descriptionBox").val("");
+        $("#linkBox").val("");
+        $("#tagBox").val("");
     });
 
     $("#goToFilterBox").click(function(){
         $("#creationBox").fadeOut(400, function(){
             $("#filterBox").fadeIn(400);
         });
+    });
+
+    $("textarea[maxlength]").on("keyup blur", function(e) {
+        var maxlength = $(this).attr('maxlength');
+        var val = $(this).val();
+        if(maxlength) {
+            // Trim the field if it has content over the maxlength.
+            if (val.length >= maxlength) {
+                $(this).val(val.slice(0, maxlength));
+            }
+        }
     });
 
     filterAddedTags.on("click",".tag",function(){
@@ -88,5 +105,8 @@ $(function(){
         return false;
     } );
 
-
+    var clearFilterTags = function(){
+        filterTags.reset();
+        $("#selectedTags").find(".tags").remove();
+    }
 });
